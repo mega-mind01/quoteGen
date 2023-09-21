@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quote Generator</title>
     <style>
-        /* CSS styles go here */
         body {
             font-family: Arial, sans-serif;
             text-align: center;
@@ -16,6 +16,7 @@
             align-items: center;
             min-height: 100vh;
         }
+
         #quote-container {
             padding: 20px;
             border: 1px solid #eeeeee;
@@ -27,17 +28,40 @@
             color: #fff;
             font-size: 25px;
         }
-        #generate-button {
-            margin-top: 20px;
+
+        #credit-card {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        #validate-button {
+            display: inline-block;
             padding: 10px 20px;
             font-size: 16px;
-            cursor: pointer;
+            border: none;
+            border-radius: 4px;
             background-color: #007bff;
             color: #fff;
-            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #validate-button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #fff;
         }
     </style>
 </head>
+
 <body>
     <div id="quote-container">
         <p id="quote">Loading... </p>
@@ -55,33 +79,13 @@
         function generate() {
             location.reload();
         }
-        let quoteNone = "None";
-        let quoteA = "Life is short; make it count.";
-        let quoteB = "Dream big, work hard, stay focused.";
-        let quoteC = "Love deeply, forgive quickly.";
-        let quoteD = "Embrace the journey, not just the destination.";
-        let quoteE = "Stay curious, keep learning.";
-        let quoteF = "Smile often, worry less.";
-        let quoteG = "Kindness matters.";
-        let quoteH = "Find joy in the little things.";
-        let quoteI = "Live with no regrets.";
-        let quoteJ = "Believe in yourself.";
-        let quoteK = "Actions speak louder than words.";
-        let quoteL = "Be fearless, not reckless.";
-        let quoteM = "Chase your passions relentlessly.";
-        let quoteN = "Happiness is a choice.";
-        let quoteO = "Stay positive, stay fighting.";
-        let quoteP = "Create your own sunshine.";
-        let quoteQ = "Tomorrow is a new day.";
-        let quoteR = "Seize the day.";
-        let quoteS = "Simplify, declutter, find peace.";
-        let quoteT = "Family first, always.";
-        
-        let quotes = [quoteNone, quoteA, quoteB, quoteC, quoteD, quoteE, quoteF, quoteG, quoteH, quoteI, quoteJ, quoteK, quoteL, quoteM, quoteN, quoteO, quoteP, quoteQ, quoteR, quoteS, quoteT];
+
+        let quotes = ["", "Life is short; make it count.", "Dream big, work hard, stay focused.", "Love deeply, forgive quickly.", "Embrace the journey, not just the destination.", "Stay curious, keep learning.", "Smile often, worry less.", "Kindness matters.", "Find joy in the little things.", "Live with no regrets.", "Believe in yourself.", "Actions speak louder than words.", "Be fearless, not reckless.", "Chase your passions relentlessly.", "Happiness is a choice.", "Stay positive, stay fighting.", "Create your own sunshine.", "Tomorrow is a new day.", "Seize the day.", "Simplify, declutter, find peace.", "Family first, always."];
         let bgColorDis = ["#FF5733", "#A93226", "#FFC300", "#3498DB", "#27AE60", "#8E44AD"];
-            const element = quotes[rdmQot];
-            print.innerHTML = element;
-            bgColor.style.backgroundColor = bgColorDis[rdmbg];
+        const element = quotes[rdmQot];
+        print.innerHTML = element;
+        bgColor.style.backgroundColor = bgColorDis[rdmbg];
     </script>
 </body>
+
 </html>
