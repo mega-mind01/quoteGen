@@ -18,6 +18,7 @@
         }
 
         #quote-container {
+            position: relative;
             padding: 20px;
             border: 1px solid #eeeeee;
             background-color: #1e0e13;
@@ -29,35 +30,18 @@
             font-size: 25px;
         }
 
-        #credit-card {
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            margin-bottom: 10px;
-        }
-
-        #validate-button {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            border-radius: 4px;
-            background-color: #007bff;
-            color: #fff;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        #validate-button:hover {
-            background-color: #0056b3;
-        }
-
-        #result {
-            margin-top: 20px;
+        #quote {
+            margin-bottom: 20px;
             font-size: 18px;
             color: #fff;
+        }
+
+        #author {
+            position: absolute;
+            /* bottom: 3px; */
+            right: 20px;
+            font-size: small;
+            text-align: right;
         }
     </style>
 </head>
@@ -82,7 +66,7 @@
             location.reload();
         }
 
-        let quotes = [[""],["The only way to do great work is to love what you do.", "- Steve Jobs"], ["In three words I can sum up everything I've learned about life: it goes on.", "- Robert Frost"], ["The best way to predict the future is to create it.", "- Peter Drucker"], ["To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.","- Ralph Waldo Emerson"], ["Success is not final, failure is not fatal: It is the courage to continue that counts.", "- Winston Churchil"], ["The only thing necessary for the triumph of evil is for good men to do nothing.", "- Edmund Burke"],["The journey of a thousand miles begins with one step.", "- Lao Tzu"], ["Life is what happens when you're busy making other plans.", "- John Lennon"], ["The only limit to our realization of tomorrow will be our doubts of today.", "- Franklin D. Roosevelt"], ["Happiness is not something ready made. It comes from your own actions.", "- Dalai Lama"], ["The only thing we have to fear is fear itself.", "- Franklin D. Roosevelt"], ["To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.", "- Ralph Waldo Emerson"], ["The future belongs to those who believe in the beauty of their dreams.", "- Eleanor Roosevelt"], ["The only true wisdom is in knowing you know nothing.", "- Socrates"], ["Life is really simple, but we insist on making it complicated.", "- Confucius"], ["Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.", "- Albert Schweitzer"], ["The greatest glory in living lies not in never falling, but in rising every time we fall.", "- Nelson Mandela"], ["In the end, we will remember not the words of our enemies, but the silence of our friends.", "- Martin Luther King Jr."], ["Life is 10% what happens to us and 90% how we react to it.", "- Charles R. Swindoll"], ["If you are trying it and it's not working, you are probably trying it in the wrong place", "- Timothy Meleki"]];
+        let quotes = [[""], ["The only way to do great work is to love what you do.", "- Steve Jobs"], ["In three words I can sum up everything I've learned about life: it goes on.", "- Robert Frost"], ["The best way to predict the future is to create it.", "- Peter Drucker"], ["To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.", "- Ralph Waldo Emerson"], ["Success is not final, failure is not fatal: It is the courage to continue that counts.", "- Winston Churchil"], ["The only thing necessary for the triumph of evil is for good men to do nothing.", "- Edmund Burke"], ["The journey of a thousand miles begins with one step.", "- Lao Tzu"], ["Life is what happens when you're busy making other plans.", "- John Lennon"], ["The only limit to our realization of tomorrow will be our doubts of today.", "- Franklin D. Roosevelt"], ["Happiness is not something ready made. It comes from your own actions.", "- Dalai Lama"], ["The only thing we have to fear is fear itself.", "- Franklin D. Roosevelt"], ["To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.", "- Ralph Waldo Emerson"], ["The future belongs to those who believe in the beauty of their dreams.", "- Eleanor Roosevelt"], ["The only true wisdom is in knowing you know nothing.", "- Socrates"], ["Life is really simple, but we insist on making it complicated.", "- Confucius"], ["Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.", "- Albert Schweitzer"], ["The greatest glory in living lies not in never falling, but in rising every time we fall.", "- Nelson Mandela"], ["In the end, we will remember not the words of our enemies, but the silence of our friends.", "- Martin Luther King Jr."], ["Life is 10% what happens to us and 90% how we react to it.", "- Charles R. Swindoll"], ["If you are trying it and it's not working, you are probably trying it in the wrong place", "- Timothy Meleki"]];
         let bgColorDis = ["#FF5733", "#A93226", "#FFC300", "#3498DB", "#27AE60", "#8E44AD"];
         const element = quotes[rdmQot];
         print.innerHTML = element[0];
@@ -91,4 +75,4 @@
     </script>
 </body>
 
-</html>2
+</html>
